@@ -1,1 +1,1 @@
-Angular with TypeScipt - basics
+Angular - basics
