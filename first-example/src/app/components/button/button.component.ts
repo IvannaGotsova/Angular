@@ -9,8 +9,13 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ButtonComponent {
   @Output () addMeRequest = new EventEmitter()
+  @Output () editMeRequest = new EventEmitter()
 
   onAdd() {
     this.addMeRequest.emit(console.log("Added on the Console"));
+  }
+
+  onEdit() {
+    this.editMeRequest.emit(console.log("Edited on the Console"));
   }
 }
