@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './button.component.css'
 })
 export class ButtonComponent {
+  @Output () addMeRequest = new EventEmitter()
 
+  onAdd() {
+    this.addMeRequest.emit(console.log("Added on the Console"));
+  }
 }
