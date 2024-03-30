@@ -11,7 +11,7 @@ export class ButtonComponent {
   @Output () addMeRequest = new EventEmitter()
   @Output () editMeRequest = new EventEmitter()
   @Output () removeMeRequest = new EventEmitter()
-
+  @Output () cancelMeRequest = new EventEmitter()
 
   onAdd() {
     this.addMeRequest.emit(console.log("Added on the Console"));
@@ -22,7 +22,10 @@ export class ButtonComponent {
   }
 
   onRemove() {
-    this.editMeRequest.emit(console.log("Removed on the Console"));
+    this.removeMeRequest.emit(console.log("Removed on the Console"));
   }
 
+  onCancel() {
+    this.cancelMeRequest.emit(console.log("Canceled on the Console"));
+  }
 }
