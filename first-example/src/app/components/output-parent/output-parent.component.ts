@@ -9,5 +9,9 @@ import { OutputChildComponent } from '../output-child/output-child.component';
   styleUrl: './output-parent.component.css'
 })
 export class OutputParentComponent {
+  outputExamples = ["exampleOne ", "exampleTwo", "exampleThree", "exampleFour", "exampleFive"];
 
+  addOutputExample(newOutput:string) {
+    this.outputExamples.push(newOutput);
+  }
 }
