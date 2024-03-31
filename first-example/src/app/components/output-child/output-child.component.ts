@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-output-child',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './output-child.component.css'
 })
 export class OutputChildComponent {
+  @Output() newOutputEventExample = new EventEmitter<string>();
 
+  addOutputEventExample(value: string) {
+    this.newOutputEventExample.emit(value);
+  }
 }
