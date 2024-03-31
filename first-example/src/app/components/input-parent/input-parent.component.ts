@@ -9,5 +9,5 @@ import { InputChildComponent } from '../input-child/input-child.component';
   styleUrl: './input-parent.component.css'
 })
 export class InputParentComponent {
-
+  ComponentInput = "Component Input Data Example!"
 }
