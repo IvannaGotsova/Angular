@@ -8,7 +8,7 @@ import { InputParentComponent } from './components/input-parent/input-parent.com
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, BodyComponent, FooterComponent, InputParentComponent],
+  imports: [RouterOutlet, HeaderComponent, BodyComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
