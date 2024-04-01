@@ -1,5 +1,5 @@
 <app-output-child (newOutputEventExample)="addOutputExample($event)"></app-output-child>
 
-<ul>
-    <li NgFor="List">{{ outputExamples }}</li>
+<ul> 
+  <li *ngFor='let outputExample of outputExamples'> {{outputExample}} </li> 
 </ul>
