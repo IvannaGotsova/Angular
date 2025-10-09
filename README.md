@@ -1,4 +1,4 @@
-Angular - basics
+Angular - Basics
 
 
 Made with TypeScript.
