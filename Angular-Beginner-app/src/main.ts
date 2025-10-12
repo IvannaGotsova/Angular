@@ -4,8 +4,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   standalone: true,
-  template: `<h1>Hello, World!</h1>`
+  template: `
+    <h3>{{ title }}</h3>
+    <p>Hello {{ name }}!</p>
+  `
 })
-class App {}
+export class App {
+  title = 'Hello User!';
+  name = 'Ivan';
+}
 
 bootstrapApplication(App);
