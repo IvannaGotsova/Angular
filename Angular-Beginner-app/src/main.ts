@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   template: `
     <h3>{{ title }}</h3>
     <input [(ngModel)]="current" type="text" placeholder="Type Name" />
-    <button (click)="read()">Change Name</button>
+    <button  [attr.aria-label]="label" (click)="read()">Change Name</button>
     <p>Hello {{ currentName | uppercase }}!</p>
   `
 })
@@ -19,6 +19,8 @@ export class App {
   title = 'Hello User!';
   current = '';
   currentName = '';
+  wide = true;
+  get label() { return this.wide ? 'Name' : ''; }
 
   read() {
     this.currentName = this.current;
