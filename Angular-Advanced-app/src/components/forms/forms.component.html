@@ -1,0 +1,5 @@
+<form #userForm="ngForm">
+  <input name="username" [(ngModel)]="username" required />
+  <button [disabled]="!userForm.valid">Submit</button>
+  <p>Hello {{ username }}!</p>
+</form>
