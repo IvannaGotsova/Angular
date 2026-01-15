@@ -10,13 +10,17 @@ import { ListsComponent } from './components/lists/lists.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { RouterComponent } from './components/router/router.component';
 import { routes } from './app/app.routes';
+import { AngularServicesDIComponent } from './components/angular-services-di/angular-services-di.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { LifecyleHooksComponent } from './components/lifecyle-hooks/lifecyle-hooks.component';
+import { StylingComponent } from './components/styling/styling.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, FormsModule, CounterComponent, ComponentDirectivesComponent, EventsComponent, ConditionalsComponent, ListsComponent,
-    FormsComponent
+    FormsComponent, AngularServicesDIComponent, PipesComponent, LifecyleHooksComponent, StylingComponent
   ],
   template: `
     <h3>{{ title }}</h3>
@@ -30,6 +34,10 @@ import { routes } from './app/app.routes';
     <app-conditionals></app-conditionals>
     <app-lists></app-lists>
     <app-forms></app-forms>
+    <app-angular-services-di></app-angular-services-di>
+    <p>{{ 'hello from the pipe!!!' | simplePipeUppercase }}</p>
+    <app-lifecyle-hooks></app-lifecyle-hooks>
+    <app-styling></app-styling>
   `
 })
 export class App {
